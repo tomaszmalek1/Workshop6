@@ -1,6 +1,8 @@
 package pl.coderslab.model;
 
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "books")
@@ -8,10 +10,15 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "Wartość nie może być pusta!")
     private String isbn;
+    @NotBlank(message = "Wartość nie może być pusta!")
     private String title;
+    @NotBlank(message = "Wartość nie może być pusta!")
     private String author;
+    @NotBlank(message = "Wartość nie może być pusta!")
     private String publisher;
+    @NotBlank(message = "Wartość nie może być pusta!")
     private String type;
 
     public Book(Long id, String isbn, String title, String author, String publisher, String type) {
@@ -24,7 +31,6 @@ public class Book {
     }
 
     public Book() {
-
     }
 
     public Long getId() {
