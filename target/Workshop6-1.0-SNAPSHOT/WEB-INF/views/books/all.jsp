@@ -26,6 +26,7 @@
     </c:forEach>
     </tbody>
 </table>
+<a href="http://localhost:8080/admin/books/add">Add</a>
 </body>
 </html>
 
